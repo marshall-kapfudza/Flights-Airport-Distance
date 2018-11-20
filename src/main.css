@@ -1,0 +1,60 @@
+.app {
+  max-width: 900px;
+  margin: 50px auto;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 15px;
+  text-align: center;
+}
+input {
+  padding: 9px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 20px;
+  border: 2px solid #4caf50;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+button:hover {
+  color: #4caf50;
+  background-color: #fff;
+}
+input:focus {
+  border-color: #888;
+}
+input:focus, button:focus {
+  outline: none;
+}
+.form-group {
+  display: inline-block;
+  padding-bottom: 15px;
+}
+.error {
+  color: #ff0000;
+}
+svg {
+  width: 50px;
+}
+svg.success g {
+  fill: #4caf50;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .form-group {
+    display: block;
+  }
+  input {
+    width: 100%;
+    margin: 5px 0 0;
+    text-align: center;
+  }
+}

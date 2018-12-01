@@ -40,12 +40,6 @@ input:focus, button:focus {
 .error {
   color: #ff0000;
 }
-svg {
-  width: 50px;
-}
-svg.success g {
-  fill: #4caf50;
-}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */

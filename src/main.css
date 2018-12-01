@@ -1,18 +1,18 @@
-.app {
+.intent__media--airport .app {
   max-width: 900px;
   margin: 50px auto;
   font-family: 'Montserrat', sans-serif;
   padding: 0 15px;
   text-align: center;
 }
-input {
+.intent__media--airport input {
   padding: 9px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 16px;
 }
-button {
+.intent__media--airport button {
   background-color: #4caf50;
   color: #fff;
   padding: 8px 20px;
@@ -23,30 +23,29 @@ button {
   font-size: 14px;
   font-weight: 600;
 }
-button:hover {
+.intent__media--airport button:hover {
   color: #4caf50;
   background-color: #fff;
 }
-input:focus {
+.intent__media--airport input:focus {
   border-color: #888;
 }
-input:focus, button:focus {
+.intent__media--airport input:focus, .intent__media--airport button:focus {
   outline: none;
 }
-.form-group {
+.intent__media--airport .form-group {
   display: inline-block;
   padding-bottom: 15px;
 }
-.error {
+.intent__media--airport .error {
   color: #ff0000;
 }
 
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .form-group {
+  .intent__media--airport .form-group {
     display: block;
   }
-  input {
+  .intent__media--airport input {
     width: 100%;
     margin: 5px 0 0;
     text-align: center;

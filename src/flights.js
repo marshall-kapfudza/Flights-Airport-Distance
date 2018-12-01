@@ -32,6 +32,7 @@ IntentMedia.Airports = (function () {
     };
     return data;
   };
+
   return pub;
 }(IntentMedia || {}));
 
@@ -49,20 +50,26 @@ IntentMedia.Distances = (function () {
     return -1;
   };
 
+  pub.airport_distance_button = function () {
+    const a = document.getElementById('IntentMediaPointA').value.toUpperCase();
+    const b = document.getElementById('IntentMediaPointB').value.toUpperCase();
+    const svg = document.getElementById('plane');
+    const value = IntentMedia.Distances.distance_between_airports(a, b);
+    
+    if(value != -1) {
+      svg.classList.add('success');
+      document.getElementById('output').innerHTML = `<p>
+        The distance between <b>${a}</b> to <b>${b}</b> is <b>${value} Miles</b></p>
+      `;
+    } else {
+      svg.classList.remove('success');
+      document.getElementById('output').innerHTML = `
+        <p class="error">
+          Oops! Airpot distance from <b>${a}</b> to <b>${b}</b> does not exist
+        </p>
+      `;
+    }
+  };
+
   return pub;
 }(IntentMedia || {}));
-
-function distBetweenAirports() {
-  const a = document.getElementById('pointA').value.toUpperCase();
-  const b = document.getElementById('pointB').value.toUpperCase();
-  const svg = document.getElementById('plane');
-  const value = IntentMedia.Distances.distance_between_airports(a, b);
-  
-  if(value != -1) {
-    svg.classList.add('success');
-    document.getElementById('output').innerHTML = `<p>The distance between <b>${a}</b> to <b>${b}</b> is <b>${value} Miles</b></p>`;
-  } else {
-    svg.classList.remove('success');
-    document.getElementById('output').innerHTML = `<p class="error">Oops! Airpot distance from <b>${a}</b> to <b>${b}</b> does not exist</p>`;
-  }
-}
